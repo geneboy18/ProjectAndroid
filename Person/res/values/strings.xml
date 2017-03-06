@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">MyContacts</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string-array name="menu">
+        <item >Send a Message</item>
+        <item >Make a Call</item>
+        <item >Update</item>
+        <item >Delete</item>
+    </string-array>
+
+</resources>
