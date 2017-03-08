@@ -1,0 +1,27 @@
+<?php
+
+	$hostname='localhost';
+	$username='root';
+	$password='';
+	$database='ictcongress';
+	$sql="SELECT * FROM tbl_student ORDER BY familyname";
+	
+	$conn=mysql_connect($hostname,$username,$password) or die('server not available');
+	$db=mysql_select_db($database) or die('Database not available');
+	
+	$query=mysql_query() or die('SQL error');
+	echo '<table border>';
+	while($row=mysql_fetch_array($query)){
+		echo '<tr>';
+			echo '<td>'.$row['idno'].'</td>';
+			echo '<td>'.$row['familyname'].'</td>';
+			echo '<td>'.$row['givenname'].'</td>';
+			echo '<td>'.$row['course'].'</td>';
+			echo '<td>'.$row['yearlevel'].'</td>';
+			echo '<td>'.$row['campus'].'</td>';
+			echo '<td>'.$row['attended'].'</td>';
+		echo '<tr>';
+	}
+	echo '</table>';
+	mysql_close($db);
+?>
